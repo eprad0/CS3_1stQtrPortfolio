@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<body>
+   <h2> Q1 3rd Graded Exercise submitted by Ed Prado of Magnesium</h2>
+   <p> Guess the number: **** <br> </p>
+   <p> The number is from 1 to 100 <br> </p>
+   <label> Enter your guess: 
+        <input id="un" />
+     </label></br>
+
+    <button onclick="checkIt()"> Check It </button>
+
+    <p> Result:
+        <span id="result"></span>
+     </p>
+
+    <script>
+       var dNumber = Math.floor(Math.random() * 100) + 1; // generates a number from 1  to 100 when the page loads
+       function checkIt() 
+        {
+            let userNumber = Number(document.getElementById("un").value);
+
+            if (userNumber === dNumber)
+              document.getElementById("result").innerText = "You are correct!";
+            else if (userNumber > dNumber)
+               document.getElementById("result").innerText = "Lower";
+            else if (userNumber < dNumber)
+               document.getElementById("result").innerText = "Higher";
+        }
+        
+    </script>
+</body>
+</html>
